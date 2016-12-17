@@ -1,0 +1,26 @@
+//Klavyeden girilen N elemanlı bir sayı dizisinin girişini ve ekrana yazan C++ programını hazırlayınız?
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int sayi;
+	cout<<"Dizinin limitini giriniz."<<endl;
+	cin>>sayi;
+	int a[sayi];	
+	for(int i=0;i<sayi;i++)
+	{
+		cout<<"Dizinin "<<i+1<<". elemanini giriniz  --> ";
+		cin>>a[i];
+	}
+	
+	cout<<"a = { ";
+	for(int i=0;i<sayi;i++)
+	{
+		cout<<a[i]<<" ";
+	}
+	cout<<"}";
+	
+	return 1995;
+}
