@@ -1,0 +1,27 @@
+//Bir öküz her gün, bir önceki gün sürdüğü tarlanın %7'si kadar daha az tarla sürebiliyor. İlk gün 300m^2 tarla süren bu öküz
+// N m^2 tarlayı kaç günde sürer.	N kullanıcı tarafından girilecek.
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int N,kalan,gun=1,ilk=300;
+	double yuzde=0.93;			//%7 eksik olacağı için 93/100 (0.93) yazdım
+	
+	cout<<"Kac metre kare tarla surulecek: ";
+	cin>>N;
+	kalan=N-300;
+	
+	while(kalan>0)
+	{
+		cout<<gun<<".gun: "<<ilk<<" Kalan: "<<kalan<<endl;
+		ilk=ilk*yuzde;
+		gun++;
+		kalan=kalan-ilk;
+	}
+	cout<<gun<<". gun: "<<ilk<<" Kalan: 0"<<endl;
+	cout<<"Toplam "<<gun<<" gunde tarlayi surer."<<endl;
+	
+	return 1995;
+}
