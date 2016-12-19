@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+
+void desen_tip1(string karakter,int N);
+void desen_tip2(string karakter,int N);
+int main()
+{
+	setlocale(LC_ALL,"turkish");
+	int sayi;
+	string c;
+	cout<<"Hangi karakter yazılacak: "; cin>>c;
+	cout<<"Kaç karakter yazılacak: "; cin>>sayi;
+	
+	desen_tip1(c,sayi);
+	desen_tip2(c,sayi);	
+	
+	return 1995;
+}
+
+void desen_tip1(string karakter,int N)
+{
+	for(int i=1;i<=N;i++)
+		{
+			for(int j=1;j<=N-i+1;j++)
+			{	
+				cout<<karakter;
+			}
+			for(int j=1;j<=i-1;j++)
+			{
+				cout<<"  ";
+			}
+			for(int j=1;j<=N-i+1;j++)
+			{
+				cout<<karakter;
+			}
+		cout<<endl;
+		}
+}
+
+
+void desen_tip2(string karakter,int N)
+{
+	for(int i=1;i<=N;i++)
+	{
+		for(int j=1;j<=i;j++)
+		{
+			cout<<karakter;
+		}
+		for(int j=1;j<=N-i;j++)
+		{
+			cout<<"  ";
+		}
+		for(int j=1;j<=i;j++)
+		{
+			cout<<karakter;
+		}
+		cout<<endl;
+	}
+}
