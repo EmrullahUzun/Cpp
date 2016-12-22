@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int sayi,toplam=0,i,limit;
+
+	setlocale(LC_ALL, "turkish");
+	printf("Üçgen sayılar\nBir sayı giriniz: ");	
+	cin >> sayi;
+	
+	for (i = 1; i < sayi; i++)
+	{
+		if (toplam != sayi)
+		{
+			toplam = toplam + i;
+			limit = i;
+		}
+		
+	}
+	if (toplam == sayi)
+	{
+		printf("Girdiğiniz sayı, üçgen sayıdır.\n");
+		cout << sayi << " = ";
+		for (int k = 1; k <= limit; k++)
+		{
+			cout << k;
+			if (k != limit)
+			{
+				cout << " + ";
+			}
+		}
+		cout << endl;
+	}
+	else
+	{
+		printf("Girdiğiniz sayı, üçgen sayı değildir.\n");
+	}
+	system("PAUSE");
+	return 1995;
+}
